@@ -1,0 +1,26 @@
+.header {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  font-weight: normal;
+  font-size: 23px;
+  height: 90px;
+  justify-content: space-between;
+  width: 100%;
+
+  &__navigation {
+    display: flex;
+    color: white;
+    position: absolute;
+    justify-content: space-evenly;
+    right: 0;
+    width: 30%;
+
+    &--destination:visited,
+    &--destination:link {
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+}
