@@ -1,24 +1,26 @@
-import "./footer.scss";
-import React from "react";
+// @flow
+import './footer.scss';
+import React from 'react';
+import i18n from '../../services/i18n';
 
 export default function Footer() {
   return (
     <div className="footer">
       <div className="footer__directions">
-        <p className="footer__directions--paragraph">Directions</p>
-        <p>Home</p>
-        <p>About</p>
-        <p>Contact</p>
+        <p className="footer__directions--paragraph">
+          {i18n.t('footer.directions')}
+        </p>
+        <p>{i18n.t('home')}</p>
+        <p>{i18n.t('about')}</p>
+        <p>{i18n.t('contact')}</p>
       </div>
       <div className="footer__contacts">
-        <p className="footer__contacts--paragraph">Contact</p>
-        <p>Company: Tanky</p>
-        <p>Phone: +420 777 999 888</p>
-        <p>E-mail: email@tanky.com</p>
-        <p>Address: Street, City, PostCode</p>
-        <p className="footer__copyright">
-          &copy;2020 inspiration of World of Tanks
-        </p>
+        <p className="footer__contacts--paragraph">{i18n.t('contact')}</p>
+        <p>{i18n.t('footer.company')}</p>
+        <p>{i18n.t('footer.tel')}</p>
+        <p>{i18n.t('footer.email')}</p>
+        <p>{i18n.t('footer.adress')}</p>
+        <p className="footer__copyright">&copy;{i18n.t('footer.copy')}</p>
       </div>
     </div>
   );

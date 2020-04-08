@@ -3,37 +3,35 @@
   background-color: black;
   color: rgb(192, 191, 191);
   display: flex;
+  flex-wrap: wrap;
   font-size: 20px;
   font-weight: 600;
   height: 330px;
-  justify-content: center;
   width: 100%;
-
-  flex: 1 1;
 
   &__directions {
     display: flex;
+    flex: 0 0 25%;
     flex-direction: column;
-    height: 220px;
+    justify-content: center;
     line-height: 0;
-    margin: 0 auto;
+    margin-left: 25%;
 
     &--paragraph {
-      margin-bottom: 39%;
-      margin-left: -10%;
+      margin-left: -3%;
       margin-top: 0;
     }
   }
 
   &__contacts {
     display: flex;
+    flex: 0 0 45%;
     flex-direction: column;
-    height: 220px;
     line-height: 0;
-    margin: 0 auto;
+    margin-left: 5%;
 
     &--paragraph {
-      margin-left: 29%;
+      margin-left: 13%;
       margin-top: 0;
     }
   }

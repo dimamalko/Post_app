@@ -1,0 +1,79 @@
+{
+  "extends": [
+    "react-app",
+    "eslint:all",
+    "plugin:flowtype/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/all"
+  ],
+  "rules": {
+    "flowtype/space-after-type-colon": [
+      "error",
+      "always",
+      {
+        "allowLineBreak": true
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": ["off"],
+    "jsx-a11y/no-autofocus": ["off"],
+    "lines-between-class-members": [
+      "error",
+      "always",
+      {
+        "exceptAfterSingleLine": true
+      }
+    ],
+    "max-lines": [
+      "error",
+      {
+        "max": 1000
+      }
+    ],
+    "max-lines-per-function": ["off"],
+    "max-statements": [
+      "error",
+      25,
+      {
+        "ignoreTopLevelFunctions": true
+      }
+    ],
+    "no-alert": ["off"],
+    "no-empty-function": ["off"],
+    "no-magic-numbers": [
+      "error",
+      {
+        "ignore": [-2, -1, 0, 1, 2, 50, 100]
+      }
+    ],
+    "no-ternary": ["off"],
+    "one-var": ["error", "never"],
+    "react/forbid-component-props": ["off"],
+    "react/function-component-definition": ["off"],
+    "react/jsx-curly-newline": ["off"],
+    "react/jsx-max-depth": ["error", { "max": 6 }],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js"]
+      }
+    ],
+    "react/jsx-indent-props": ["error", 2],
+    "react/jsx-indent": ["error", 2],
+    "react/jsx-max-props-per-line": [
+      "error",
+      {
+        "maximum": 4
+      }
+    ],
+    "react/jsx-no-bind": [
+      "error",
+      {
+        "allowArrowFunctions": true
+      }
+    ],
+    "react/jsx-one-expression-per-line": ["off"],
+    "react/jsx-props-no-spreading": ["off"],
+    "react/no-multi-comp": ["off"]
+  }
+}

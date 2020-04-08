@@ -1,13 +1,21 @@
-import React from "react";
-import Footer from "../src/components/footer/footer";
-import Home from "../src/screens/Home";
-import Header from "./components/header/header";
+import './App.scss';
+import Footer from '../src/components/footer/footer';
+import Header from './components/header/header';
+import Home from '../src/screens/Home';
+import React from 'react';
+import Sidebar from './components/sidebar/sidebar';
+import Card from './components/card/card';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Home />
+      <div className="flow">
+        <Sidebar />
+        <Card>
+          <Home />
+        </Card>
+      </div>
       <Footer />
     </div>
   );
