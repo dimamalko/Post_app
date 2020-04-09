@@ -1,5 +1,13 @@
 .sidebar {
+  align-items: center;
   background: linear-gradient(to left bottom, #808080 11%, hsl(0, 0%, 100%));
-  margin-right: 0;
+  box-shadow: 3px 0 3px 0 rgba(133, 133, 133, 1);
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
   width: 17%;
+}
+.sidebar > div {
+  flex: 0 0 auto;
+  margin: 10px;
 }

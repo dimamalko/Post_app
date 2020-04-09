@@ -10,15 +10,17 @@ export default function Footer() {
         <p className="footer__directions--paragraph">
           {i18n.t('footer.directions')}
         </p>
-        <p>{i18n.t('home')}</p>
-        <p>{i18n.t('about')}</p>
-        <p>{i18n.t('contact')}</p>
+        <p>{i18n.t('general.home')}</p>
+        <p>{i18n.t('general.about')}</p>
+        <p>{i18n.t('general.contact')}</p>
       </div>
       <div className="footer__contacts">
-        <p className="footer__contacts--paragraph">{i18n.t('contact')}</p>
+        <p className="footer__contacts--paragraph">
+          {i18n.t('general.contact')}
+        </p>
         <p>{i18n.t('footer.company')}</p>
         <p>{i18n.t('footer.tel')}</p>
-        <p>{i18n.t('footer.email')}</p>
+        <p>{i18n.t('footer.contactEmail')}</p>
         <p>{i18n.t('footer.adress')}</p>
         <p className="footer__copyright">&copy;{i18n.t('footer.copy')}</p>
       </div>

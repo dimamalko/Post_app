@@ -1,15 +1,20 @@
 module.exports = {
-  about: 'About',
-  contact: 'Contact',
   footer: {
     adress: 'Address: Street, City, PostCode',
     company: 'Company: Tanky',
+    contactEmail: 'E-mail: email@tanky.com',
     copy: '2020 inspiration of World of Tanks',
     directions: 'Directions',
-    email: 'E-mail: email@tanky.com',
     tel: 'Phone: +420 777 999 888'
   },
-  home: 'Home',
+  general: {
+    about: 'About',
+    contact: 'Contact',
+    email: 'Email',
+    home: 'Home',
+    login: 'Login',
+    password: 'Password'
+  },
   sidebar: {
     title: 'sidebar'
   }
