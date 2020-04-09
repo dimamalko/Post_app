@@ -1,8 +1,15 @@
 // @flow
-import './buttons.scss';
+import './Button.scss';
 import React from 'react';
 
-export default function Button({ children, onClick, primary, type }) {
+type Props = {
+  +children?: React.Node,
+  +onClick?: (event: SyntheticEvent<HTMLButtonElement>) => void | Promise<void>,
+  +type?: 'button' | 'reset' | 'submit',
+  +primary?: boolean
+};
+
+export default function Button({ children, onClick, primary, type }: Props) {
   return (
     <button
       className={`button ${primary ? 'primary' : ''}`}
@@ -13,3 +20,10 @@ export default function Button({ children, onClick, primary, type }) {
     </button>
   );
 }
+
+Button.defaultProps = {
+  children: null,
+  onClick: () => {},
+  primary: false,
+  type: 'button'
+};

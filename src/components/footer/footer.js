@@ -1,5 +1,5 @@
 // @flow
-import './footer.scss';
+import './Footer.scss';
 import React from 'react';
 import i18n from '../../services/i18n';
 

@@ -13,9 +13,13 @@ module.exports = {
     email: 'Email',
     home: 'Home',
     login: 'Login',
-    password: 'Password'
+    password: 'Password',
+    register: 'Register',
+    singIn: 'Sing In'
   },
-  sidebar: {
-    title: 'sidebar'
+  singIn: {
+    name: 'Name',
+    surname: 'Surrname',
+    confirm: 'Confirm'
   }
 };

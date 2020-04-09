@@ -1,0 +1,15 @@
+.singIn {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.singIn > div {
+  flex: 0 0 auto;
+  margin: 10px;
+}

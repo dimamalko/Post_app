@@ -1,10 +1,10 @@
 import './App.scss';
-import Footer from '../src/components/footer/footer';
-import Header from './components/header/header';
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
 import Home from '../src/screens/Home';
 import React from 'react';
-import Sidebar from './components/sidebar/sidebar';
-import Card from './components/card/card';
+import Sidebar from './components/sidebar/Sidebar';
+import Card from './components/card/Card';
 
 function App() {
   return (

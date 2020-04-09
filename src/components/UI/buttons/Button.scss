@@ -7,11 +7,11 @@
   border-radius: 15px;
 
   &.primary {
-    box-shadow: 3px 4px 0px 0px #899599;
     background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+    box-shadow: 3px 4px 0px 0px #899599;
     border: 1px solid #d6bcd6;
-    display: inline-block;
     color: #3a8a9e;
+    display: inline-block;
     text-shadow: 0px 1px 0px #e1e2ed;
   }
 }
