@@ -15,7 +15,7 @@ module.exports = {
     login: 'Login',
     password: 'Password',
     register: 'Register',
-    singIn: 'Sing In'
+    singUp: 'Sing Up'
   },
   singIn: {
     name: 'Name',

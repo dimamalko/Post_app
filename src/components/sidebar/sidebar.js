@@ -13,7 +13,7 @@ export default function Sidebar() {
       case 'singUp':
         return (
           <div>
-            <SingUp />
+            <SingIn />
             <div
               className="btn"
               onClick={() => {
@@ -27,7 +27,7 @@ export default function Sidebar() {
       case 'singIn':
         return (
           <div>
-            <SingIn />
+            <SingUp />
             <div
               className="btn btn__back"
               onClick={() => {
