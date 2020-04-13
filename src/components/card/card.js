@@ -1,8 +1,8 @@
 // @flow
 import './Card.scss';
 import React from 'react';
-import i18n from '../../services/i18n';
+//import i18n from '../../services/i18n';
 
-export default function Card() {
-  return <div className="card">{i18n.t('kurva')}</div>;
+export default function Card({ children }) {
+  return <div className="card">{children}</div>;
 }
