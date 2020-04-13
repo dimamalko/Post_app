@@ -1,20 +1,45 @@
 .header {
   align-items: center;
-  background-color: black;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.205),
+      rgba(255, 255, 255, 0.034)
+    ),
+    url(../../Images/tanks.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   font-size: 23px;
   font-weight: normal;
-  height: 90px;
-  justify-content: space-between;
+  height: 278px;
+  justify-content: center;
   width: 100%;
 
+  &__logo {
+    padding-top: 6rem;
+  }
+
   &__navigation {
-    color: white;
     display: flex;
     justify-content: space-evenly;
+    width: 30%;
+  }
+
+  &__bar {
+    align-items: center;
+    align-self: start;
+    background-color: rgba(0, 0, 0, 0.425);
+    color: white;
+    display: flex;
+    height: 6rem;
+    justify-content: space-between;
     position: absolute;
     right: 0;
-    width: 30%;
+    width: 100%;
+
+    &--img {
+      height: 75px;
+    }
 
     &--destination:visited,
     &--destination:link {
