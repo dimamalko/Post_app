@@ -67,7 +67,7 @@ export default function SingUp() {
         />
       </div>
       <div>
-        <Button onClick={e => handleSubmit(e)} primary type="button">
+        <Button onClick={e => handleSubmit(e)} primary type="submit">
           {i18n.t('singIn.confirm')}
         </Button>
       </div>

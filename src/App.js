@@ -7,24 +7,27 @@ import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import Home from '../src/screens/Home';
 import React from 'react';
+import { SessionProvider } from './context/SessionContext';
 import Sidebar from './components/sidebar/Sidebar';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <div className="flow">
-        <Sidebar />
-        <BrowserRouter>
-          <Card>
-            <Route exact path="/" component={Home} />
-            <Route path="/About" component={About} />
-            <Route path="/Contact" component={Contact} />
-          </Card>
-        </BrowserRouter>
-      </div>
-      <Footer />
-    </div>
+    <SessionProvider>
+      <BrowserRouter>
+        <div className="App">
+          <Header />
+          <div className="flow">
+            <Sidebar />
+            <Card>
+              <Route exact path="/Home" component={Home} />
+              <Route path="/About" component={About} />
+              <Route path="/Contact" component={Contact} />
+            </Card>
+          </div>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </SessionProvider>
   );
 }
 

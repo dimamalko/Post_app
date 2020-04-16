@@ -1,26 +1,35 @@
 import './Header.scss';
+import Button from '../UI/buttons/Button';
 import Logo from '../../assets/Images/logo.png';
 import React from 'react';
 import i18n from '../../services/i18n';
+import { Link } from 'react-router-dom';
+import firebase from '../../firebase';
 
 export default function Header() {
+  const handleLogout = () => {
+    console.log('hovno');
+    firebase.auth().signOut();
+  };
+
   return (
     <div className="header">
       <nav className="header__bar">
-        <img className="header__bar--img" src={Logo} alt="logo" />
+        <img alt="logo" className="header__bar--img" src={Logo} />
         <div className="header__navigation">
-          <a className="header__bar--destination" href="/">
+          <Link className="header__bar--destination" to="/Home">
             {i18n.t('general.home')}
-          </a>
-          <a className="header__bar--destination" href="/About">
+          </Link>
+          <Link className="header__bar--destination" to="/About">
             {i18n.t('general.about')}
-          </a>
-          <a className="header__bar--destination" href="/Contact">
+          </Link>
+          <Link className="header__bar--destination" to="/Contact">
             {i18n.t('general.contact')}
-          </a>
+          </Link>
         </div>
       </nav>
-      <img className="header__logo" src={Logo} alt="logo" />
+      <img alt="logo" className="header__logo" src={Logo} />
+      <Button onClick={() => handleLogout()}>{i18n.t('logout')}</Button>
     </div>
   );
 }
