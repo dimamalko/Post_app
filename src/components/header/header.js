@@ -1,17 +1,10 @@
 import './Header.scss';
-import Button from '../UI/buttons/Button';
 import Logo from '../../assets/Images/logo.png';
 import React from 'react';
 import i18n from '../../services/i18n';
 import { Link } from 'react-router-dom';
-import firebase from '../../firebase';
 
 export default function Header() {
-  const handleLogout = () => {
-    console.log('hovno');
-    firebase.auth().signOut();
-  };
-
   return (
     <div className="header">
       <nav className="header__bar">
@@ -29,7 +22,6 @@ export default function Header() {
         </div>
       </nav>
       <img alt="logo" className="header__logo" src={Logo} />
-      <Button onClick={() => handleLogout()}>{i18n.t('logout')}</Button>
     </div>
   );
 }

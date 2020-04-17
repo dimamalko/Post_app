@@ -1,0 +1,9 @@
+.logged {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.logged > div {
+  flex: 0 0 auto;
+  margin: 10px;
+}

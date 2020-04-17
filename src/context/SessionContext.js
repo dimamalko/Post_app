@@ -19,17 +19,17 @@ const SessionProvider = ({ children }) => {
     let unsubscribe = null;
 
     const handleAuthStateChanged = user => {
-      console.log('USER', user);
+      // console.log('USER', user);
       if (!user) {
         setCurrentUser(null);
 
         return;
       }
       unsubscribe = db.doc(`users/${user.uid}`).onSnapshot(userSnap => {
-        console.log('SNAP', userSnap);
+        // console.log('SNAP', userSnap);
         if (userSnap.exists) {
           const userData = userSnap.data();
-          console.log('DATA', userData);
+          // console.log('DATA', userData);
           setCurrentUser({
             ...userData,
             userId: user.uid

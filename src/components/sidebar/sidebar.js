@@ -1,40 +1,77 @@
 // @flow
 import './Sidebar.scss';
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import Button from '../UI/buttons/Button';
+import LoggedIn from '../LoggedIn/LoggedIn';
+import SessionContext from '../../context/SessionContext';
+import firebase from '../../firebase';
 import SingIn from '../SingIn/SingIn';
 import SingUp from '../SingUp/SingUp';
 import i18n from '../../services/i18n';
 
 export default function Sidebar() {
-  const [status, setStatus] = useState('singUp');
+  const handleLogout = () => {
+    firebase.auth().signOut();
+  };
+
+  const [status, setStatus] = useState('singIn');
+  console.log('STATUS', status);
+
+  const { currentUser } = useContext(SessionContext);
+  console.log('CURRENT USER', currentUser);
+
+  useEffect(() => {
+    if (currentUser) {
+      setStatus('logged');
+    }
+
+    return () => {
+      setStatus('singIn');
+    };
+  }, [currentUser]);
 
   const showContent = () => {
     switch (status) {
-      case 'singUp':
+      case 'singIn':
         return (
           <div>
             <SingIn />
             <div
               className="btn"
               onClick={() => {
-                setStatus('singIn');
+                setStatus('singUp');
               }}
             >
               {i18n.t('general.register')}
             </div>
           </div>
         );
-      case 'singIn':
+      case 'singUp':
         return (
           <div>
             <SingUp />
             <div
               className="btn btn__back"
               onClick={() => {
-                setStatus('singUp');
+                setStatus('singIn');
               }}
             >
               {i18n.t('general.login')}
+            </div>
+          </div>
+        );
+      case 'logged':
+        return (
+          <div>
+            <LoggedIn />
+            <div
+              className="btn btn__back"
+              onClick={async () => {
+                await handleLogout();
+                await setStatus('singIn');
+              }}
+            >
+              {i18n.t('logout')}
             </div>
           </div>
         );
