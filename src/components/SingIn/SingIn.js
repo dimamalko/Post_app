@@ -23,7 +23,7 @@ export default function SingIn(children) {
   console.log('prihlasen', currentUser);
 
   return (
-    <form className="login" onSubmit={handleLogin}>
+    <div className="login">
       {i18n.t('general.login')}
       <div className="login__input">
         {i18n.t('general.email')}
@@ -48,6 +48,6 @@ export default function SingIn(children) {
           {i18n.t('general.login')}
         </Button>
       </div>
-    </form>
+    </div>
   );
 }

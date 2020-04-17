@@ -32,7 +32,7 @@ export default function SingUp() {
   };
 
   return (
-    <form className="singIn">
+    <div className="singIn">
       {i18n.t('general.singUp')}
 
       <div className="singIn__input">
@@ -71,6 +71,6 @@ export default function SingUp() {
           {i18n.t('singIn.confirm')}
         </Button>
       </div>
-    </form>
+    </div>
   );
 }

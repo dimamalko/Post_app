@@ -38,9 +38,9 @@ const SessionProvider = ({ children }) => {
       });
     };
 
-    // firebase.auth().onAuthStateChanged(handleAuthStateChanged);
+    firebase.auth().onAuthStateChanged(handleAuthStateChanged);
 
-    firebase.auth().onAuthStateChanged(User => console.log('USER2', User));
+    // firebase.auth().onAuthStateChanged(User => console.log('USER2', User));
 
     return () => {
       unsubscribe && unsubscribe();
