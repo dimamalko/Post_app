@@ -2,6 +2,12 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  line-height: 2rem;
+
+  &__para {
+    text-align: center;
+  }
 }
 .logged > div {
   flex: 0 0 auto;

@@ -1,9 +1,9 @@
 // @flow
 import './SingIn.scss';
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import Button from '../UI/buttons/Button';
 import Input from '../UI/inputs/Input';
-import SessionContext from '../../context/SessionContext';
+// import SessionContext from '../../context/SessionContext';
 import firebase from '../../firebase';
 import i18n from '../../services/i18n';
 
@@ -19,8 +19,8 @@ export default function SingIn(children) {
     }
   };
 
-  const { currentUser } = useContext(SessionContext);
-  console.log('prihlasen', currentUser);
+  // const { currentUser } = useContext(SessionContext);
+  // console.log('prihlasen', currentUser);
 
   return (
     <div className="login">

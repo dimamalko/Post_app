@@ -1,7 +1,6 @@
 // @flow
 import './Sidebar.scss';
 import React, { useContext, useEffect, useState } from 'react';
-import Button from '../UI/buttons/Button';
 import LoggedIn from '../LoggedIn/LoggedIn';
 import SessionContext from '../../context/SessionContext';
 import firebase from '../../firebase';
@@ -15,10 +14,10 @@ export default function Sidebar() {
   };
 
   const [status, setStatus] = useState('singIn');
-  console.log('STATUS', status);
+  // console.log('STATUS', status);
 
   const { currentUser } = useContext(SessionContext);
-  console.log('CURRENT USER', currentUser);
+  // console.log('CURRENT USER', currentUser);
 
   useEffect(() => {
     if (currentUser) {
