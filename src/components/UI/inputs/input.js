@@ -2,10 +2,20 @@
 import './Input.scss';
 import React from 'react';
 
-export default function Input({ placeholder, type, onChange, value, width }) {
+export default function Input({
+  placeholder,
+  type,
+  onChange,
+  value,
+  width,
+  title,
+  post
+}) {
   return (
     <input
-      className={`input ${width ? 'input__width' : ''}`}
+      className={`input ${width ? 'input__width' : ''} ${
+        title ? 'input__title' : ''
+      } ${post ? 'input__post' : ''}`}
       onChange={e => {
         onChange(e.target.value);
       }}

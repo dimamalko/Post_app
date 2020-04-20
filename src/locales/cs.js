@@ -6,6 +6,7 @@ module.exports = {
     text:
       'Vestibulum fermentum tortor id mi. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis pulvinar. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Nunc tincidunt ante vitae massa. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Phasellus et lorem id felis nonummy placerat. Nulla est. Aliquam in lorem sit amet leo accumsan lacinia. Aliquam erat volutpat. Et harum quidem rerum facilis est et expedita distinctio. In rutrum. Duis viverra diam non justo. Nullam rhoncus aliquam metus. Aenean fermentum risus id tortor. Etiam commodo dui eget wisi.'
   },
+  post: { title: 'Title', text: 'Text' },
   footer: {
     adress: 'Address: Street, City, PostCode',
     company: 'Company: Tanky',
@@ -24,8 +25,9 @@ module.exports = {
     register: 'Register',
     singUp: 'Sing Up'
   },
-  Logged: {
+  logged: {
     add: 'Would you like to add a post?',
+    create: 'Create Post',
     dot: '.',
     welcome: 'Welcome '
   },
