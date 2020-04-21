@@ -1,7 +1,12 @@
 import './Home.scss';
+import MainPost from '../components/MainPost/MainPost';
 import React from 'react';
-import i18n from '../services/i18n';
+// import i18n from '../services/i18n';
 
 export default function Home() {
-  return <div>{i18n.t('Home')}</div>;
+  return (
+    <div>
+      <MainPost />
+    </div>
+  );
 }

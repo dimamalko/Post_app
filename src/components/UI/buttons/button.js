@@ -6,13 +6,20 @@ type Props = {
   +children?: React.Node,
   +onClick?: (event: SyntheticEvent<HTMLButtonElement>) => void | Promise<void>,
   +type?: 'button' | 'reset' | 'submit',
-  +primary?: boolean
+  +primary?: boolean,
+  +medium?: boolean
 };
 
-export default function Button({ children, onClick, primary, type }: Props) {
+export default function Button({
+  children,
+  onClick,
+  primary,
+  type,
+  medium
+}: Props) {
   return (
     <button
-      className={`button ${primary ? 'primary' : ''}`}
+      className={`button ${primary ? 'primary' : ''} ${medium ? 'medium' : ''}`}
       onClick={() => onClick()}
       type={type}
     >

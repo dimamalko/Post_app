@@ -15,7 +15,7 @@ export default function Input({
     <input
       className={`input ${width ? 'input__width' : ''} ${
         title ? 'input__title' : ''
-      } ${post ? 'input__post' : ''}`}
+      }`}
       onChange={e => {
         onChange(e.target.value);
       }}
