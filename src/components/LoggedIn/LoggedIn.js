@@ -31,6 +31,9 @@ export default function SingIn(children) {
         {i18n.t('logged.dot')}
       </p>
       <p className="logged__para">{i18n.t('logged.add')}</p>
+      <Link className="logged__post" to="/NewMainPost">
+        {i18n.t('logged.createMain')}
+      </Link>
       <Link className="logged__post" to="/NewPost">
         {i18n.t('logged.create')}
       </Link>
