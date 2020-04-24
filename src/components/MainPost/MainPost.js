@@ -24,8 +24,10 @@ export default function MainPost() {
   return (
     <div className="main">
       {mainPost.map(singlePost => (
-        <div key={singlePost.id} className="main__title">
-          <Link to={'/MainPost/' + singlePost.id}>{singlePost.title}</Link>
+        <div className="main__title" key={singlePost.id}>
+          <Link className="main__link" to={'/MainPost/' + singlePost.id}>
+            {singlePost.title}
+          </Link>
         </div>
       ))}
     </div>

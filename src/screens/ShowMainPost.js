@@ -25,11 +25,9 @@ export default function UserInfo() {
   const info = usePerson(_id);
 
   return (
-    <div className="userdetail">
-      <div key={info.id} className="userdetail__info">
-        <p>{info.title}</p>
-        <p>{info.text}</p>
-      </div>
+    <div className="singlePost" key={info.id}>
+      <p>{info.title}</p>
+      <p>{info.text}</p>
     </div>
   );
 }
