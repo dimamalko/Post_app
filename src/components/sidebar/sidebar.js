@@ -17,7 +17,7 @@ export default function Sidebar() {
   // console.log('STATUS', status);
 
   const { currentUser } = useContext(SessionContext);
-  console.log('CURRENT USER', currentUser);
+  // console.log('CURRENT USER', currentUser);
 
   useEffect(() => {
     if (currentUser) {

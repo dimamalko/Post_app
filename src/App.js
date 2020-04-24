@@ -12,6 +12,7 @@ import React from 'react';
 import { SessionProvider } from './context/SessionContext';
 import Sidebar from './components/sidebar/Sidebar';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import ShowMainPost from './screens/ShowMainPost';
 
 function App() {
   return (
@@ -25,10 +26,11 @@ function App() {
               <Route exact path="/Home" component={Home} />
               <Route path="/About" component={About} />
               <Route path="/Contact" component={Contact} />
+              <Route path="/MainPost/:_id" component={ShowMainPost} />
               <PrivateRoute exact path="/NewPost" component={CreatePost} />
               <PrivateRoute
                 exact
-                path="/NewMainPost"
+                path="/NewMainPost/"
                 component={CreateMainPost}
               />
             </Card>
